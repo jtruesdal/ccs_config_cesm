@@ -13,10 +13,15 @@
     <directive default="/bin/bash" > -S {{ shell }} </directive>
     <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}:mem={{ mem_per_node }}GB:ngpus={{ ngpus_per_node }} </directive>
   </directives>
+  <directives queue="workshop" gpu_enabled="false">
+    <directive default="/bin/bash" > -S {{ shell }} </directive>
+    <directive> -l select={{ num_nodes }}:ncpus={{ max_tasks_per_node }}:mpiprocs={{ tasks_per_node }}:ompthreads={{ thread_count }}:mem={{ mem_per_node }}GB:ngpus={{ ngpus_per_node }} </directive>
+  </directives>
   <!-- Unknown queues use the batch directives for the regular queue -->
   <unknown_queue_directives>casper</unknown_queue_directives>
   <queues>
     <queue walltimemax="12:00:00" nodemin="1" nodemax="10">casper</queue>
+    <queue walltimemax="12:00:00" nodemin="1" nodemax="64">workshop</queue>
   </queues>
 </batch_system>
 
