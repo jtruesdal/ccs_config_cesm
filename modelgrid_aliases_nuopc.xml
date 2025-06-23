@@ -25,6 +25,13 @@
     <grid name="iac"       compset="SIAC"        >null</grid>
   </model_grid_defaults>
 
+  <model_grid alias="ne0MIDWESTne30x5_ne0MIDWESTne30x5" not_compset="_POP">
+    <grid name="atm">ne0np4.MIDWEST.ne30x5</grid>
+    <grid name="lnd">ne0np4.MIDWEST.ne30x5</grid>
+    <grid name="ocnice">ne0np4.MIDWEST.ne30x5</grid>
+    <mask>tx0.1v2</mask>
+  </model_grid>
+
   <model_grid alias="g16_g16" compset="DATM.+DROF">
     <grid name="atm">gx1v6</grid>
     <grid name="lnd">gx1v6</grid>

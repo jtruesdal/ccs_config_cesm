@@ -17,6 +17,12 @@
   <!-- ATM/LND meshes regional and global -->
   <!-- ======================================================== -->
 
+  <domain name="ne0np4.MIDWEST.ne30x5">
+    <nx>381674</nx> <ny>1</ny>
+    <mesh>/glade/u/home/nforcone/CESM-Meeting/Mesh/midwest-ncf-ESMF.nc</mesh>
+    <desc>Spectral Elem 1-deg grid with 5 refinement levels over the Midwest</desc>
+  </domain>
+
   <domain name="360x720cru">
     <nx>720</nx> <ny>360</ny>
     <mesh>$DIN_LOC_ROOT/share/meshes/360x720_120830_ESMFmesh_c20210507.nc</mesh>
