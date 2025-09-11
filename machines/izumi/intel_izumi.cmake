@@ -8,7 +8,11 @@ if (COMP_NAME STREQUAL mpi-serial)
   string(APPEND CFLAGS " -std=c89 ")
 endif()
 
-if (USE_KOKKOS)
+set(SCC icc)
+set(SCXX icpc)
+set(SFC ifort)
+
+if (COMP_NAME STREQUAL driver AND USE_KOKKOS)
   # Skylake optimization
   option(KOKKOS_ARCH_AVX512XEON "" ON)
   # Generic setting that are used regardless of Architecture or Kokkos backend

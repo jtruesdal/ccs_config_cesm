@@ -55,6 +55,7 @@ macrop_driver.o \
 shr_spfn_mod.o
 
 RRTMGP_OBJS=\
+radiation.o \
 rrtmgp_allsky.o \
 rrtmgp_rfmip_lw.o \
 rrtmgp_rfmip_sw.o \
@@ -174,6 +175,12 @@ ifeq ($(DEBUG),FALSE)
 	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS) $(OPENACC_GPU_FLAGS) $<
   $(CLUBB_OBJS): %.o: %.F90
 	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS) $(OPENACC_GPU_FLAGS) $<
+
+ifeq ($(COMP_NAME),mpaso)
+  # mpas ocean files need gpuflags
+  FFLAGS +=$(GPUFLAGS)
+endif
+
 else
   $(REDUCED_ERRORCHKS_IN_DEBUG): %.o: %.F90
 	  $(FC) -c $(INCLDIR) $(INCS) $(FFLAGS) $(FREEFLAGS) -Mnobounds -Ktrap=none -Knoieee $<
