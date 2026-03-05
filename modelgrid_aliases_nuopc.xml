@@ -1196,6 +1196,34 @@
     <mask>gx1v7</mask>
   </model_grid>
 
+  <model_grid alias="ne1024pg2_ne1024pg2_mg17" not_compset="_MOM">
+    <grid name="atm">ne1024np4.pg2</grid>
+    <grid name="lnd">ne1024np4.pg2</grid>
+    <grid name="ocnice">ne1024np4.pg2</grid>
+    <mask>gx1v7</mask>
+  </model_grid>
+
+  <model_grid alias="ne1024_ne1024_mg17" not_compset="_MOM">
+    <grid name="atm">ne1024np4</grid>
+    <grid name="lnd">ne1024np4</grid>
+    <grid name="ocnice">ne1024np4</grid>
+    <mask>gx1v7</mask>
+  </model_grid>
+
+  <model_grid alias="ne1024pg2_ne1024pg2_mt13" not_compset="_MOM">
+    <grid name="atm">ne1024np4.pg2</grid>
+    <grid name="lnd">ne1024np4.pg2</grid>
+    <grid name="ocnice">ne1024np4.pg2</grid>
+    <mask>tx0.1v3</mask>
+  </model_grid>
+
+  <model_grid alias="ne1024_ne1024_mt13" not_compset="_MOM">
+    <grid name="atm">ne1024np4</grid>
+    <grid name="lnd">ne1024np4</grid>
+    <grid name="ocnice">ne1024np4</grid>
+    <mask>tx0.1v3</mask>
+  </model_grid>
+
   <!--  spectral element grids with 2x2 FVM physics grid -->
 
   <model_grid alias="ne3pg2_ne3pg2_mt232" not_compset="_MOM">

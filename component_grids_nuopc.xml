@@ -237,6 +237,18 @@
     <desc>ne240np4.pg3 is a Spectral Elem 0.125-deg grid with a 3x3 FVM physics grid:</desc>
     <support>EXPERIMENTAL FVM physics grid</support>
   </domain>
+  <domain name="ne1024np4.pg2">
+    <nx>25165824</nx> <ny>1</ny>
+    <desc>ne1024np4.pg2 is a Spectral Elem 3km grid with a 2x2 FVM physics grid:</desc>
+    <mesh>$DIN_LOC_ROOT/share/meshes/ne1024pg2_ESMFmesh_cdf5_c250812.nc</mesh>
+    <support>EXPERIMENTAL FVM physics grid</support>
+  </domain>
+  <domain name="ne1024np4">
+    <nx>56623106</nx> <ny>1</ny>
+    <desc>ne1024np4 is a Spectral Elem 3km grid</desc>
+    <mesh>$DIN_LOC_ROOT/share/meshes/ne1024np4_ESMFmesh_cdf5_c260304.nc</mesh>
+    <support>EXPERIMENTAL FVM physics grid</support>
+  </domain>
   <domain name="ne0np4TESTONLY.ne5x4">
     <nx>3863</nx> <ny>1</ny>
     <desc>ne0np4TESTONLY.ne5x4 is a low-resolution refined SE grid for testing:</desc>
