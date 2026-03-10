@@ -135,7 +135,7 @@
       <!-- DEBUG FALSE and then true: with any MPI and NOT gnu compiler -->
       <modules DEBUG="FALSE" compiler="!gnu">
         <command name="load">parallelio/2.6.6</command>
-        <command name="load">esmf/8.8.1</command>
+        <command name="load">esmf/8.9.0</command>
       </modules>
       <modules DEBUG="TRUE" compiler="!gnu">
         <command name="load">parallelio/2.6.6-debug</command>
@@ -166,5 +166,7 @@
     </environment_variables>
     <environment_variables gpu_type="!none">
       <env name="NCAR_LIBS_CUDA">-lcuda -lcudart</env>
+      <env name="MPICH_GPU_IPC_ENABLED">0</env>
+      <env name="MPICH_GPU_MANAGED_MEMORY_SUPPORT_ENABLED">0</env>
     </environment_variables>
-  </machine>
+</machine>
