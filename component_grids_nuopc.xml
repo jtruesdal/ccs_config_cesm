@@ -147,6 +147,7 @@
   </domain>
   <domain name="ne30np4">
     <nx>48602</nx> <ny>1</ny>
+    <file>$DIN_LOC_ROOT/share/domains/domain.lnd.ne30_gx1v7.171003.nc</file>
     <mesh>$DIN_LOC_ROOT/share/meshes/ne30np4_ESMFmesh_cdf5_c20211018.nc</mesh>
     <desc>ne30np4 is Spectral Elem 1-deg grid:</desc>
   </domain>
