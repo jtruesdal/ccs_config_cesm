@@ -24,7 +24,7 @@ if (USE_KOKKOS)
     # Enable EPYC arch in kokkos
     if (compile_threaded)
       # Settings used when OpenMP is the Kokkos backend
-      string(APPEND KOKKOS_OPTIONS " -DKokkos_ARCH_ZEN3=ON -DKokkos_ENABLE_AGGRESSIVE_VECTORIZATION=ON -DKokkos_ENABLE_SERIAL=OFF -DKokkos_ENABLE_OPENMP=ON")
+      string(APPEND KOKKOS_OPTIONS " -DKokkos_ARCH_ZEN3=ON -DKokkos_ENABLE_AGGRESSIVE_VECTORIZATION=ON -DKokkos_ENABLE_SERIAL=ON -DKokkos_ENABLE_OPENMP=ON")
     else()
       string(APPEND KOKKOS_OPTIONS " -DKokkos_ARCH_ZEN3=ON -DKokkos_ENABLE_SERIAL=ON -DKokkos_ENABLE_OPENMP=OFF")
     endif()
