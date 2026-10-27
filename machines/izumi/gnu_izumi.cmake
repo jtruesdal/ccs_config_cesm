@@ -1,3 +1,4 @@
+string(APPEND FFLAGS " -fallow-argument-mismatch -fallow-invalid-boz ")
 if (COMP_NAME STREQUAL gptl)
   string(APPEND CPPDEFS " -DHAVE_SLASHPROC")
 endif()
